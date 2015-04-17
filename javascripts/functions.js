@@ -30,27 +30,25 @@ var finalString = ""; for(var j = 0; j < armstrongArray.length; ++j) {
 };
 
 //C
-var allSubstrings1 = function(string) {
-	"use strict";
+var allSubstrings1 = function(string) {"use strict";
 	var result = "";
 	for(var i = 0; i <= string.length; i++) {
-        for(var j = i+1; j <= string.length; j++) {
-        	result = result + string.substring(i,j) + ', ' + ' ';
+    for(var j = i+1; j <= string.length; j++) {
+      result = result + string.substring(i,j) + ', ' + ' ';
         }
 	}
 	return result;
 };
 
 //D
-var allSubstrings2 = function(string) {
-	"use strict";
+var allSubstrings2 = function(string) {"use strict";
 	// make empty array.
 	var result = [];
 	for(var i = 0; i <= string.length; i++) {
     for(var j = i+1; j <= string.length; j++) {
-        // assign variable to b that creates a substring of a string. 
-        var b = string.substring(i,j);
-        // push substrings to the empty array.
+     // assign variable to b that creates a substring of a string. 
+     var b = string.substring(i,j);
+     // push substrings to the empty array.
         result.push(b);
         }
 	}
@@ -58,17 +56,15 @@ var allSubstrings2 = function(string) {
 };
 
 //E
-var maxWord = function(string) {
-	"use strict"
+var maxWord = function(string) {"use strict"
 	// split string into substrings.
-	// Turns the variable word into an empty value by assigning it to null.
+	// variable "word" ---> empty value by assigning it to null.
 	var sep = string.split(" "), max = 0, word = null;
-	// Loops through string checking each substring and evaluates if substring is longer 
-	// than the other.
+	//check each substring to evaluate length
 	for (var i = 0; i < sep.length; ++i) {
-		if (max < sep[i].length) {
-			max = sep[i].length;
-			word = sep[i];
+	if (max < sep[i].length) {
+		max = sep[i].length;
+		word = sep[i];
 		}
 	}
 	return word;
